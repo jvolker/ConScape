@@ -1,3 +1,4 @@
 .project
 .settings
 bin
+data/.DS_Store
