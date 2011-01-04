@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/76/trunk/unfolding/libNative
+END
+jogl_awt.dll
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/76/trunk/unfolding/libNative/jogl_awt.dll
+END
+libjogl_cg.jnilib
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/76/trunk/unfolding/libNative/libjogl_cg.jnilib
+END
+gluegen-rt.dll
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/76/trunk/unfolding/libNative/gluegen-rt.dll
+END
+libjogl_awt.jnilib
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/76/trunk/unfolding/libNative/libjogl_awt.jnilib
+END
+jogl.dll
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/76/trunk/unfolding/libNative/jogl.dll
+END
+libgluegen-rt.jnilib
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/76/trunk/unfolding/libNative/libgluegen-rt.jnilib
+END
+libjogl.jnilib
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/76/trunk/unfolding/libNative/libjogl.jnilib
+END
+jogl_cg.dll
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/76/trunk/unfolding/libNative/jogl_cg.dll
+END
