@@ -18,7 +18,7 @@ import de.fhpotsdam.unfolding.utils.DebugDisplay;
 
 public class Main extends PApplet 
 {
-
+    // Ein blöder Kommentar
 	Map map;
 	EventDispatcher eventDispatcher;
 	DebugDisplay debugDisplay;
