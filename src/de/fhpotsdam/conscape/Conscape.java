@@ -10,6 +10,7 @@ import com.google.gson.Gson;
 
 import codeanticode.glgraphics.GLConstants;
 import processing.core.PApplet;
+import processing.core.PFont;
 import de.fhpotsdam.unfolding.Map;
 import de.fhpotsdam.unfolding.events.EventDispatcher;
 import de.fhpotsdam.unfolding.interactions.MouseHandler;
@@ -19,7 +20,7 @@ import de.fhpotsdam.unfolding.providers.OpenStreetMap;
 import de.fhpotsdam.unfolding.utils.MapUtils;
 import de.fhpotsdam.unfolding.geo.Location;
 
-public class Main extends PApplet 
+public class Conscape extends PApplet 
 {
 	Map map;
 	EventDispatcher eventDispatcher;
@@ -27,11 +28,14 @@ public class Main extends PApplet
 	TuioCursorHandler tuioCursorHandler;
 	DataLoader dataLoader;
 	Venue[] venues;
+	
+	PFont font;
 
 	public void setup() 
 	{
 		size(1000, 750, GLConstants.GLGRAPHICS);
-
+		font = createFont("Courier", 32);
+		textFont(font, 14); 
 		map = new Map(this);
 		// map = new Map(this, "Berlin-Mitte", 50, 100, 900, 550, true, false, new OpenStreetMap.CloudmadeProvider(MapDisplayFactory.OSM_API_KEY, 23058));
 		map.setTweening(false);
@@ -46,7 +50,7 @@ public class Main extends PApplet
 		// DataLoader holt die Daten und liefert entsprechende Listen zurück
 		dataLoader = new DataLoader();
 		venues = dataLoader.getVenuesFromLastFM();
-		 map.zoomAndPanTo(new Location((float) 52.522, (float) 13.405), 20);
+		map.zoomAndPanTo(new Location((float) 52.522, (float) 13.405), 20);
 		
 	}
 
@@ -64,8 +68,10 @@ public class Main extends PApplet
 			float xy[] = map.mapDisplay.getScreenPositionFromLocation(location);
 			
 			noStroke();
-			fill(255, 0, 0);
-			ellipse(xy[0], xy[1], 10, 10);
+			fill(0);
+			ellipse(xy[0], xy[1], 5, 5);
+			fill(50);
+			text(v.name, xy[0] + 10, xy[1] + 10);
 		}
 		
 		// tuioCursorHandler.drawCursors();
