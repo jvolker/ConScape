@@ -17,7 +17,7 @@ import de.fhpotsdam.unfolding.interactions.TuioCursorHandler;
 
 public class Main extends PApplet 
 {
-
+    // Ein blöder Kommentar
 	Map map;
 	EventDispatcher eventDispatcher;
 	
