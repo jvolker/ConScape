@@ -24,8 +24,9 @@ public class DataLoader
 	private Response load(String path) throws Exception
 	{
 		String source = StringUtil.readFileAsString(path);
+		System.out.println(source);
         Response response = new Gson().fromJson(source, Response.class);
-
+        
 		return response;
 	}
 	public ArrayList<Object> getVenuesFromLastFM () 
@@ -35,7 +36,7 @@ public class DataLoader
 		ArrayList<Object> venues = new ArrayList<Object>();
 		try {
 			response = load(venuesFromLastFM);
-			System.out.println(response);
+			System.out.println(response.venues);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

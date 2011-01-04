@@ -3,8 +3,10 @@
  */
 package de.fhpotsdam.conscape;
 
+import java.util.List;
+
 public class Response {
-	Venue[] venues;
+	Object venues;
 	
 	class Venue {
 		String website;
@@ -12,10 +14,10 @@ public class Response {
 		String url;
 		String phonenumber;
 		Object location;
-	}
-	
-	public Response() {
+		
+		public Venue () {
 
+		}
 	}
 }
 
