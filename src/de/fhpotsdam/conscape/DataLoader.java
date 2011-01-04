@@ -5,6 +5,7 @@ package de.fhpotsdam.conscape;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.lang.reflect.Array;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -29,14 +30,14 @@ public class DataLoader
         
 		return response;
 	}
-	public ArrayList<Object> getVenuesFromLastFM () 
+	public Venue[] getVenuesFromLastFM () 
 	{
 		Response response;
-		
-		ArrayList<Object> venues = new ArrayList<Object>();
+		Venue[] venues = null;
+	
 		try {
 			response = load(venuesFromLastFM);
-			System.out.println(response.venues);
+			venues = response.venues;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
