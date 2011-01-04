@@ -14,16 +14,15 @@ import de.fhpotsdam.unfolding.Map;
 import de.fhpotsdam.unfolding.events.EventDispatcher;
 import de.fhpotsdam.unfolding.interactions.MouseHandler;
 import de.fhpotsdam.unfolding.interactions.TuioCursorHandler;
-import de.fhpotsdam.unfolding.utils.DebugDisplay;
 
 public class Main extends PApplet 
 {
 
 	Map map;
 	EventDispatcher eventDispatcher;
-	DebugDisplay debugDisplay;
 	
 	TuioCursorHandler tuioCursorHandler;
+	DataLoader dataLoader;
 
 	public void setup() 
 	{
@@ -41,28 +40,18 @@ public class Main extends PApplet
 		eventDispatcher.addBroadcaster(mouseHandler);
 
 		eventDispatcher.register(map, "pan");
-
-		debugDisplay = new DebugDisplay(this, map.mapDisplay, 0, 0, 250, 200);
+		
+		dataLoader = new DataLoader();
+		dataLoader.getVenuesFromLastFM();
+		
 	}
 
 	public void draw() 
 	{
 		background(0);
-
+		
 		map.draw();
-		debugDisplay.draw();
 		
 		tuioCursorHandler.drawCursors();
 	}
-	
-	private Response load(String url) throws Exception
-	{
-		System.out.println("API-URL: " + url);
-		URL u = new URL(url);
-		String r = new Scanner(u.openStream()).useDelimiter("\\Z").next();
-        Response response = new Gson().fromJson(r, Response.class);
-
-		return response;
-	}
-
 }
