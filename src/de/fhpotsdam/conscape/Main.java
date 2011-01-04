@@ -3,8 +3,6 @@
  */
 package de.fhpotsdam.conscape;
 
-import hci.model.Response;
-
 import java.net.URL;
 import java.util.Scanner;
 
@@ -55,11 +53,6 @@ public class Main extends PApplet
 		debugDisplay.draw();
 		
 		tuioCursorHandler.drawCursors();
-	}
-	
-	public void loadLocations() 
-	{
-		load()
 	}
 	
 	private Response load(String url) throws Exception
