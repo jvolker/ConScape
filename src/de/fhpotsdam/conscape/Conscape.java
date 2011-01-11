@@ -44,6 +44,7 @@ public class Conscape extends PApplet
 		eventDispatcher = new EventDispatcher();
 		tuioCursorHandler = new TuioCursorHandler(this, map);
 		eventDispatcher.addBroadcaster(tuioCursorHandler);
+		eventDispatcher.register(map, "pan");
 		// Maus-Events
 		eventDispatcher = MapUtils.createDefaultEventDispatcher(this, map);
 		
