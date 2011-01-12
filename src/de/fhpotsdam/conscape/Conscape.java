@@ -44,9 +44,7 @@ public class Conscape extends PApplet
 		eventDispatcher = new EventDispatcher();
 		tuioCursorHandler = new TuioCursorHandler(this, map);
 		eventDispatcher.addBroadcaster(tuioCursorHandler);
-		
 		eventDispatcher.register(map, "pan");
-		
 		// Maus-Events
 		eventDispatcher = MapUtils.createDefaultEventDispatcher(this, map);
 		
@@ -57,6 +55,10 @@ public class Conscape extends PApplet
 		
 	}
 
+	public static void main(String args[]) {
+		
+		PApplet.main(new String[] { de.fhpotsdam.conscape.Conscape.class.getName() });
+	}
 	public void draw() 
 	{
 		background(0);
@@ -71,14 +73,12 @@ public class Conscape extends PApplet
 			float xy[] = map.mapDisplay.getScreenPositionFromLocation(location);
 			
 			noStroke();
-			fill(0);
-			ellipse(xy[0], xy[1], 5, 5);
-			fill(50);
-			stroke(255);
-			strokeWeight(4);
+			fill(255,0,0);
+			ellipse(xy[0], xy[1], 10, 10);
+			fill(50,150);
 			text(v.name, xy[0] + 10, xy[1] + 10);
 		}
 		
-		// tuioCursorHandler.drawCursors();
+		 tuioCursorHandler.drawCursors();
 	}
 }

@@ -16,7 +16,7 @@ import de.fhpotsdam.conscape.util.StringUtil;
 
 public class DataLoader 
 {
-	private String venuesFromLastFM = "../data/venues_lastfm.json";
+	private String venuesFromLastFM = "data/venues_lastfm.json";
 	
 	public DataLoader() 
 	{
