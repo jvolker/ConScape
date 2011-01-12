@@ -12,5 +12,9 @@
 	<classpathentry kind="lib" path="lib/log4j-1.2.15.jar"/>
 	<classpathentry kind="lib" path="lib/opengl.jar"/>
 	<classpathentry kind="lib" path="lib/gson-1.4.jar"/>
+	<classpathentry kind="lib" path="lib/SQLibrary.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-3.1.14-bin.jar"/>
+	<classpathentry kind="lib" path="lib/postgresql-8.3-604.jdbc3.jar"/>
+	<classpathentry kind="lib" path="lib/sqlitejdbc-v053-pure.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

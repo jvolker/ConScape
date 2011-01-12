@@ -33,7 +33,7 @@ public class Conscape extends PApplet
 
 	public void setup() 
 	{
-		size(1000, 750, GLConstants.GLGRAPHICS);
+		size(800, 600, GLConstants.GLGRAPHICS);
 		font = createFont("Courier", 32);
 		textFont(font, 14); 
 		map = new Map(this);
